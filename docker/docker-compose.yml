@@ -1,17 +1,13 @@
-version: '3'
+version: '2'
 services:
   db:
     image: postgres
   web:
-    image: nam20485/dockersite:initial
+    image: nam20485/dockersite:second
     command: python3 manage.py runserver 0.0.0.0:8000
     volumes:
-      - .:/code
+      - .:/dockersite
     ports:
       - "8000:8000"
     depends_on:
       - db
-    networks:
-        - webnet
-networks:
-    webnet:
