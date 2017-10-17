@@ -3,8 +3,8 @@ services:
   db:
     image: postgres
   web:
-    image: nam20485/dockersite:second
-    command: python3 manage.py runserver 0.0.0.0:8000
+    image: nam20485/dockersite:fourth
+    command: python3 /dockersite/manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/dockersite
     ports:
